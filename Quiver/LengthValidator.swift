@@ -24,6 +24,11 @@ public class LengthValidator: Validator {
             throw ValidationErrorType.typeMismatch(expected: String.self, actual: type(of: object!))
         }
         
+        // RequiredValidator takes care of this validation.
+        if string.isEmpty {
+            return true
+        }
+        
         return (min...max).contains(string.count)
     }
 }
