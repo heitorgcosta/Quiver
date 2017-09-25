@@ -6,7 +6,7 @@
 //  Copyright © 2017 Heitor Costa. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
 
 //! Project version number for Quiver.
 FOUNDATION_EXPORT double QuiverVersionNumber;

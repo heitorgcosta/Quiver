@@ -7,9 +7,34 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6C3613611F6B53B700E7092F /* Validatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C3613601F6B53B700E7092F /* Validatable.swift */; };
+		6C3E7F121F7090B90090B2C3 /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C3E7F111F7090B90090B2C3 /* Validator.swift */; };
+		6C3E7F151F7092C40090B2C3 /* RequiredValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C3E7F141F7092C40090B2C3 /* RequiredValidator.swift */; };
+		6C3E7F191F70947E0090B2C3 /* QuiverMiscValidatorsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C3E7F181F70947E0090B2C3 /* QuiverMiscValidatorsTests.swift */; };
+		6C49ED261F6CD79C009DDE0F /* ValidatorMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C49ED251F6CD79C009DDE0F /* ValidatorMapper.swift */; };
+		6C54A3471F773478008B8A59 /* LengthValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C54A3461F773478008B8A59 /* LengthValidator.swift */; };
+		6C54A3491F7735A3008B8A59 /* QuiverStringValidatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C54A3481F7735A3008B8A59 /* QuiverStringValidatorTests.swift */; };
+		6C5F8CA11F6795F100E1ECD1 /* Quiver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C5F8CA01F6795F100E1ECD1 /* Quiver.swift */; };
+		6C6FC3B01F771EC90023D924 /* ValidationErrorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C6FC3AF1F771EC90023D924 /* ValidationErrorType.swift */; };
 		6C80D8161F50E95500A24FC8 /* Quiver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C80D80C1F50E95500A24FC8 /* Quiver.framework */; };
-		6C80D81B1F50E95500A24FC8 /* QuiverTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C80D81A1F50E95500A24FC8 /* QuiverTests.swift */; };
+		6C80D81B1F50E95500A24FC8 /* QuiverSearchingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C80D81A1F50E95500A24FC8 /* QuiverSearchingTests.swift */; };
 		6C80D81D1F50E95500A24FC8 /* Quiver.h in Headers */ = {isa = PBXBuildFile; fileRef = 6C80D80F1F50E95500A24FC8 /* Quiver.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6C80D8271F50E96B00A24FC8 /* Array+QuiverSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C80D8261F50E96B00A24FC8 /* Array+QuiverSearch.swift */; };
+		6C80D8291F50FD7E00A24FC8 /* Searchable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C80D8281F50FD7E00A24FC8 /* Searchable.swift */; };
+		6C80D8311F5104D400A24FC8 /* Stringable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C80D8301F5104D400A24FC8 /* Stringable.swift */; };
+		6C8BF0331F76D4C1000261A5 /* ValidationErrorItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C8BF0321F76D4C1000261A5 /* ValidationErrorItem.swift */; };
+		6C8BF0351F76D6E0000261A5 /* Array+QuiverFiltering.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C8BF0341F76D6E0000261A5 /* Array+QuiverFiltering.swift */; };
+		6C8BF0381F76DF7E000261A5 /* QuiverEnumValidatorsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C8BF0371F76DF7E000261A5 /* QuiverEnumValidatorsTests.swift */; };
+		6C8BF03A1F770E79000261A5 /* QuiverFilteringTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C8BF0391F770E79000261A5 /* QuiverFilteringTests.swift */; };
+		6CABDE091F71DCAA0060EE72 /* ValidatorResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CABDE081F71DCAA0060EE72 /* ValidatorResult.swift */; };
+		6CABDE0B1F71DCF70060EE72 /* ValidationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CABDE0A1F71DCF70060EE72 /* ValidationError.swift */; };
+		6CBCA7061F75725800F8E8D8 /* ValidatorEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CBCA7051F75725800F8E8D8 /* ValidatorEngine.swift */; };
+		6CF012491F70CF7F00FF112E /* QuiverIntegerValidatorsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CF012481F70CF7F00FF112E /* QuiverIntegerValidatorsTests.swift */; };
+		6CF0124B1F70CFA000FF112E /* QuiverFloatingValidatorsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CF0124A1F70CFA000FF112E /* QuiverFloatingValidatorsTests.swift */; };
+		6CF012511F70D12100FF112E /* ComparatorValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CF012501F70D12100FF112E /* ComparatorValidator.swift */; };
+		6CF012531F70D3B400FF112E /* RangeValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CF012521F70D3B400FF112E /* RangeValidator.swift */; };
+		6CF012551F70D47600FF112E /* NegateValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CF012541F70D47600FF112E /* NegateValidator.swift */; };
+		6CF012581F70E0B600FF112E /* QuiverValidatableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CF012571F70E0B600FF112E /* QuiverValidatableTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -23,12 +48,37 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6C3613601F6B53B700E7092F /* Validatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Validatable.swift; sourceTree = "<group>"; };
+		6C3E7F111F7090B90090B2C3 /* Validator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
+		6C3E7F141F7092C40090B2C3 /* RequiredValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequiredValidator.swift; sourceTree = "<group>"; };
+		6C3E7F181F70947E0090B2C3 /* QuiverMiscValidatorsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuiverMiscValidatorsTests.swift; sourceTree = "<group>"; };
+		6C49ED251F6CD79C009DDE0F /* ValidatorMapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValidatorMapper.swift; sourceTree = "<group>"; };
+		6C54A3461F773478008B8A59 /* LengthValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LengthValidator.swift; sourceTree = "<group>"; };
+		6C54A3481F7735A3008B8A59 /* QuiverStringValidatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuiverStringValidatorTests.swift; sourceTree = "<group>"; };
+		6C5F8CA01F6795F100E1ECD1 /* Quiver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Quiver.swift; sourceTree = "<group>"; };
+		6C6FC3AF1F771EC90023D924 /* ValidationErrorType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationErrorType.swift; sourceTree = "<group>"; };
 		6C80D80C1F50E95500A24FC8 /* Quiver.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Quiver.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C80D80F1F50E95500A24FC8 /* Quiver.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Quiver.h; sourceTree = "<group>"; };
 		6C80D8101F50E95500A24FC8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6C80D8151F50E95500A24FC8 /* QuiverTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QuiverTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		6C80D81A1F50E95500A24FC8 /* QuiverTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuiverTests.swift; sourceTree = "<group>"; };
+		6C80D81A1F50E95500A24FC8 /* QuiverSearchingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuiverSearchingTests.swift; sourceTree = "<group>"; };
 		6C80D81C1F50E95500A24FC8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6C80D8261F50E96B00A24FC8 /* Array+QuiverSearch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+QuiverSearch.swift"; sourceTree = "<group>"; };
+		6C80D8281F50FD7E00A24FC8 /* Searchable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Searchable.swift; sourceTree = "<group>"; };
+		6C80D8301F5104D400A24FC8 /* Stringable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stringable.swift; sourceTree = "<group>"; };
+		6C8BF0321F76D4C1000261A5 /* ValidationErrorItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationErrorItem.swift; sourceTree = "<group>"; };
+		6C8BF0341F76D6E0000261A5 /* Array+QuiverFiltering.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+QuiverFiltering.swift"; sourceTree = "<group>"; };
+		6C8BF0371F76DF7E000261A5 /* QuiverEnumValidatorsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuiverEnumValidatorsTests.swift; sourceTree = "<group>"; };
+		6C8BF0391F770E79000261A5 /* QuiverFilteringTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuiverFilteringTests.swift; sourceTree = "<group>"; };
+		6CABDE081F71DCAA0060EE72 /* ValidatorResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValidatorResult.swift; sourceTree = "<group>"; };
+		6CABDE0A1F71DCF70060EE72 /* ValidationError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValidationError.swift; sourceTree = "<group>"; };
+		6CBCA7051F75725800F8E8D8 /* ValidatorEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidatorEngine.swift; sourceTree = "<group>"; };
+		6CF012481F70CF7F00FF112E /* QuiverIntegerValidatorsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuiverIntegerValidatorsTests.swift; sourceTree = "<group>"; };
+		6CF0124A1F70CFA000FF112E /* QuiverFloatingValidatorsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuiverFloatingValidatorsTests.swift; sourceTree = "<group>"; };
+		6CF012501F70D12100FF112E /* ComparatorValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComparatorValidator.swift; sourceTree = "<group>"; };
+		6CF012521F70D3B400FF112E /* RangeValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RangeValidator.swift; sourceTree = "<group>"; };
+		6CF012541F70D47600FF112E /* NegateValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NegateValidator.swift; sourceTree = "<group>"; };
+		6CF012571F70E0B600FF112E /* QuiverValidatableTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuiverValidatableTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +100,52 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6C36135F1F6B539D00E7092F /* Validating */ = {
+			isa = PBXGroup;
+			children = (
+				6C3613601F6B53B700E7092F /* Validatable.swift */,
+				6CBCA7051F75725800F8E8D8 /* ValidatorEngine.swift */,
+				6C49ED251F6CD79C009DDE0F /* ValidatorMapper.swift */,
+				6C3E7F111F7090B90090B2C3 /* Validator.swift */,
+				6CABDE081F71DCAA0060EE72 /* ValidatorResult.swift */,
+				6CABDE0A1F71DCF70060EE72 /* ValidationError.swift */,
+				6C8BF0321F76D4C1000261A5 /* ValidationErrorItem.swift */,
+				6C6FC3AF1F771EC90023D924 /* ValidationErrorType.swift */,
+				6C3E7F131F7092A10090B2C3 /* Default Validators */,
+			);
+			name = Validating;
+			sourceTree = "<group>";
+		};
+		6C3E7F131F7092A10090B2C3 /* Default Validators */ = {
+			isa = PBXGroup;
+			children = (
+				6C3E7F141F7092C40090B2C3 /* RequiredValidator.swift */,
+				6CF012501F70D12100FF112E /* ComparatorValidator.swift */,
+				6CF012521F70D3B400FF112E /* RangeValidator.swift */,
+				6CF012541F70D47600FF112E /* NegateValidator.swift */,
+				6C54A3451F77346B008B8A59 /* Strings */,
+			);
+			name = "Default Validators";
+			sourceTree = "<group>";
+		};
+		6C54A3451F77346B008B8A59 /* Strings */ = {
+			isa = PBXGroup;
+			children = (
+				6C54A3461F773478008B8A59 /* LengthValidator.swift */,
+			);
+			name = Strings;
+			sourceTree = "<group>";
+		};
+		6C5F8C9F1F67942100E1ECD1 /* Searching */ = {
+			isa = PBXGroup;
+			children = (
+				6C80D8261F50E96B00A24FC8 /* Array+QuiverSearch.swift */,
+				6C80D8281F50FD7E00A24FC8 /* Searchable.swift */,
+				6C80D8301F5104D400A24FC8 /* Stringable.swift */,
+			);
+			name = Searching;
+			sourceTree = "<group>";
+		};
 		6C80D8021F50E95500A24FC8 = {
 			isa = PBXGroup;
 			children = (
@@ -71,6 +167,10 @@
 		6C80D80E1F50E95500A24FC8 /* Quiver */ = {
 			isa = PBXGroup;
 			children = (
+				6C5F8CA01F6795F100E1ECD1 /* Quiver.swift */,
+				6C36135F1F6B539D00E7092F /* Validating */,
+				6C5F8C9F1F67942100E1ECD1 /* Searching */,
+				6CF012561F70DEB200FF112E /* Filtering */,
 				6C80D80F1F50E95500A24FC8 /* Quiver.h */,
 				6C80D8101F50E95500A24FC8 /* Info.plist */,
 			);
@@ -80,10 +180,49 @@
 		6C80D8191F50E95500A24FC8 /* QuiverTests */ = {
 			isa = PBXGroup;
 			children = (
-				6C80D81A1F50E95500A24FC8 /* QuiverTests.swift */,
+				6C8BF0361F76DE36000261A5 /* Filtering */,
+				6CF012471F70CF5E00FF112E /* Validating */,
+				6CF012461F70CF5600FF112E /* Searching */,
 				6C80D81C1F50E95500A24FC8 /* Info.plist */,
 			);
 			path = QuiverTests;
+			sourceTree = "<group>";
+		};
+		6C8BF0361F76DE36000261A5 /* Filtering */ = {
+			isa = PBXGroup;
+			children = (
+				6C8BF0391F770E79000261A5 /* QuiverFilteringTests.swift */,
+			);
+			name = Filtering;
+			sourceTree = "<group>";
+		};
+		6CF012461F70CF5600FF112E /* Searching */ = {
+			isa = PBXGroup;
+			children = (
+				6C80D81A1F50E95500A24FC8 /* QuiverSearchingTests.swift */,
+			);
+			name = Searching;
+			sourceTree = "<group>";
+		};
+		6CF012471F70CF5E00FF112E /* Validating */ = {
+			isa = PBXGroup;
+			children = (
+				6C3E7F181F70947E0090B2C3 /* QuiverMiscValidatorsTests.swift */,
+				6CF012481F70CF7F00FF112E /* QuiverIntegerValidatorsTests.swift */,
+				6CF0124A1F70CFA000FF112E /* QuiverFloatingValidatorsTests.swift */,
+				6C8BF0371F76DF7E000261A5 /* QuiverEnumValidatorsTests.swift */,
+				6C54A3481F7735A3008B8A59 /* QuiverStringValidatorTests.swift */,
+				6CF012571F70E0B600FF112E /* QuiverValidatableTests.swift */,
+			);
+			name = Validating;
+			sourceTree = "<group>";
+		};
+		6CF012561F70DEB200FF112E /* Filtering */ = {
+			isa = PBXGroup;
+			children = (
+				6C8BF0341F76D6E0000261A5 /* Array+QuiverFiltering.swift */,
+			);
+			name = Filtering;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -143,12 +282,13 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0830;
-				LastUpgradeCheck = 0830;
+				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = "Heitor Costa";
 				TargetAttributes = {
 					6C80D80B1F50E95500A24FC8 = {
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = UH4V6M93FY;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
 					6C80D8141F50E95500A24FC8 = {
@@ -198,6 +338,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6C6FC3B01F771EC90023D924 /* ValidationErrorType.swift in Sources */,
+				6C8BF0351F76D6E0000261A5 /* Array+QuiverFiltering.swift in Sources */,
+				6C3E7F121F7090B90090B2C3 /* Validator.swift in Sources */,
+				6C3E7F151F7092C40090B2C3 /* RequiredValidator.swift in Sources */,
+				6C80D8271F50E96B00A24FC8 /* Array+QuiverSearch.swift in Sources */,
+				6CBCA7061F75725800F8E8D8 /* ValidatorEngine.swift in Sources */,
+				6C8BF0331F76D4C1000261A5 /* ValidationErrorItem.swift in Sources */,
+				6CABDE091F71DCAA0060EE72 /* ValidatorResult.swift in Sources */,
+				6C3613611F6B53B700E7092F /* Validatable.swift in Sources */,
+				6C5F8CA11F6795F100E1ECD1 /* Quiver.swift in Sources */,
+				6CF012551F70D47600FF112E /* NegateValidator.swift in Sources */,
+				6CF012511F70D12100FF112E /* ComparatorValidator.swift in Sources */,
+				6C54A3471F773478008B8A59 /* LengthValidator.swift in Sources */,
+				6C49ED261F6CD79C009DDE0F /* ValidatorMapper.swift in Sources */,
+				6C80D8291F50FD7E00A24FC8 /* Searchable.swift in Sources */,
+				6CABDE0B1F71DCF70060EE72 /* ValidationError.swift in Sources */,
+				6C80D8311F5104D400A24FC8 /* Stringable.swift in Sources */,
+				6CF012531F70D3B400FF112E /* RangeValidator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -205,7 +363,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6C80D81B1F50E95500A24FC8 /* QuiverTests.swift in Sources */,
+				6C3E7F191F70947E0090B2C3 /* QuiverMiscValidatorsTests.swift in Sources */,
+				6C8BF0381F76DF7E000261A5 /* QuiverEnumValidatorsTests.swift in Sources */,
+				6C8BF03A1F770E79000261A5 /* QuiverFilteringTests.swift in Sources */,
+				6C80D81B1F50E95500A24FC8 /* QuiverSearchingTests.swift in Sources */,
+				6CF0124B1F70CFA000FF112E /* QuiverFloatingValidatorsTests.swift in Sources */,
+				6CF012581F70E0B600FF112E /* QuiverValidatableTests.swift in Sources */,
+				6C54A3491F7735A3008B8A59 /* QuiverStringValidatorTests.swift in Sources */,
+				6CF012491F70CF7F00FF112E /* QuiverIntegerValidatorsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -230,7 +395,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -238,7 +405,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -284,7 +455,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -292,7 +465,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -324,6 +501,7 @@
 		6C80D8211F50E95500A24FC8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = UH4V6M93FY;
@@ -336,13 +514,15 @@
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.costa.heitor.Quiver;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
 		6C80D8221F50E95500A24FC8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = UH4V6M93FY;
@@ -355,13 +535,14 @@
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.costa.heitor.Quiver;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};
 		6C80D8241F50E95500A24FC8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = UH4V6M93FY;
 				INFOPLIST_FILE = QuiverTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -374,6 +555,7 @@
 		6C80D8251F50E95500A24FC8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = UH4V6M93FY;
 				INFOPLIST_FILE = QuiverTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -402,6 +584,7 @@
 				6C80D8221F50E95500A24FC8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6C80D8231F50E95500A24FC8 /* Build configuration list for PBXNativeTarget "QuiverTests" */ = {
 			isa = XCConfigurationList;
@@ -410,6 +593,7 @@
 				6C80D8251F50E95500A24FC8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
