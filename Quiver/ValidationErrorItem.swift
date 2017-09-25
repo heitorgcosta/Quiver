@@ -7,7 +7,7 @@
 //
 
 public struct ValidationErrorItem {
-    var message: String?
-    var type: ValidationErrorType
-    var keyPath: AnyKeyPath
+    public var message: String?
+    public var type: ValidationErrorType
+    public var keyPath: AnyKeyPath
 }

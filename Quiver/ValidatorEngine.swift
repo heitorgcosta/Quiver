@@ -29,7 +29,7 @@ class ValidatorEngine<T> where T: Validatable {
             errorItems.append(contentsOf: unit.results())
         }
         
-        return ValidatorResult(success: errorItems.count == 0, error: errorItems.count == 0 ? nil : ValidationError(errors: errorItems))
+        return ValidatorResult(success: errorItems.count == 0, error: errorItems.count == 0 ? nil : ValidationError(items: errorItems))
     }
 }
 

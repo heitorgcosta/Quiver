@@ -6,7 +6,7 @@
 //  Copyright © 2017 Heitor Costa. All rights reserved.
 //
 
-enum ValidationErrorType: Error {
+public enum ValidationErrorType: Error {
     case validation(value: Any?)
     case typeMismatch(expected: Any.Type, actual: Any.Type)
 }

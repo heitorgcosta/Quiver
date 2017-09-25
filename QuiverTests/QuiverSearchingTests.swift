@@ -47,7 +47,7 @@ class QuiverSearchingTests: XCTestCase {
     }
     
     // Test array
-    var array: [Searchable] = []
+    var array: [TestClass] = []
     
     override func setUp() {
         super.setUp()

@@ -9,17 +9,21 @@
 public struct ValidationError {
     typealias ValidationErrorItemMap = [AnyKeyPath:[ValidationErrorItem]]
     
-    public private(set) var errors: [ValidationErrorItem] = []
+    public private(set) var items: [ValidationErrorItem] = []
     private var mappedByField: ValidationErrorItemMap = [:]
     
-    init(errors: [ValidationErrorItem]) {
-        self.errors = errors
-        
-        mapErrorsByField()
+    public var firstItem: ValidationErrorItem? {
+        return items.first
     }
     
-    private mutating func mapErrorsByField() {
-        mappedByField = errors.reduce(ValidationErrorItemMap(), { (dict, item) -> ValidationErrorItemMap in
+    init(items: [ValidationErrorItem]) {
+        self.items = items
+        
+        mapItemsByField()
+    }
+    
+    private mutating func mapItemsByField() {
+        mappedByField = items.reduce(ValidationErrorItemMap(), { (dict, item) -> ValidationErrorItemMap in
             var dict = dict
             
             if dict[item.keyPath] == nil {

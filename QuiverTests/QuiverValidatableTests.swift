@@ -61,12 +61,12 @@ class QuiverValidatableTests: XCTestCase {
         let unnamedPerson = Person(name: nil)
         let unnamedPersonResult = unnamedPerson.validate()
         XCTAssert(unnamedPersonResult.success == false, "Expected 'false' as result, got '\(unnamedPersonResult.success)'")
-        XCTAssert(unnamedPersonResult.error!.errors.count == 1, "Expected 1 error, got \(unnamedPersonResult.error!.errors.count)")
+        XCTAssert(unnamedPersonResult.error!.items.count == 1, "Expected 1 error, got \(unnamedPersonResult.error!.items.count)")
         
         let bob = Person(name: "Bob")
         let bobResult = bob.validate()
         XCTAssert(bobResult.success == false, "Expected 'false' as result, got '\(bobResult.success)'")
-        XCTAssert(bobResult.error!.errors.count == 1, "Expected 1 error, got \(bobResult.error!.errors.count)")
+        XCTAssert(bobResult.error!.items.count == 1, "Expected 1 error, got \(bobResult.error!.items.count)")
         
         let john = Person(name: "John")
         let johnResult = john.validate()
@@ -90,13 +90,13 @@ class QuiverValidatableTests: XCTestCase {
         
         let personNil = Person(name: nil)
         let nilResult = personNil.validate()
-        let nilMessage = nilResult.error!.errors[0].message
+        let nilMessage = nilResult.error!.firstItem?.message
         XCTAssertNotNil(nilMessage, "Expected message to not be nil, but it is.")
         XCTAssert(nilMessage! == "Name is required", "Expected message passed through argument, but got '\(nilMessage!)'")
         
         let personAna = Person(name: "Ana")
         let anaResult = personAna.validate()
-        let anaMessage = anaResult.error!.errors[0].message
+        let anaMessage = anaResult.error!.firstItem?.message
         XCTAssertNotNil(anaMessage, "Expected message to not be nil, but it is.")
         XCTAssert(anaMessage! == "Name should be at least 4 characters long.", "Expected message passed through argument, but got '\(anaMessage!)'")
         

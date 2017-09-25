@@ -6,7 +6,7 @@
 //  Copyright © 2017 Heitor Costa. All rights reserved.
 //
 
-public extension Array where Element == Searchable {
+public extension Array where Element: Searchable {
     
     /**
      Search the array for Searchable objects with matching fields marked as a searchable field.
@@ -35,7 +35,7 @@ public extension Array where Element == Searchable {
         return results
     }
     
-    private func flattenedProperties(_ element: Element, _ caseSensitive: Bool) -> [String] {
+    private func flattenedProperties(_ element: Searchable, _ caseSensitive: Bool) -> [String] {
         var flatProperties: [String] = []
         
         let properties = element.searchableFields()
