@@ -1,6 +1,11 @@
 # Quiver
 
 [![license](https://img.shields.io/github/license/mashape/apistatus.svg)](https://opensource.org/licenses/MIT)
+![Swift 4.0](https://img.shields.io/badge/Swift-4.0-green.svg?style=flat)
+![Xcode 9.0](https://img.shields.io/badge/Xcode-9.0-yellow.svg?style=flat)
+[![CocoaPods Compatible](https://img.shields.io/cocoapods/v/Quiver.svg)](https://img.shields.io/cocoapods/v/Quiver.svg)
+[![Build Status](https://travis-ci.org/heitorgcosta/Quiver.svg?branch=master)](https://travis-ci.org/heitorgcosta/Quiver)
+[![codecov](https://codecov.io/gh/heitorgcosta/Quiver/branch/master/graph/badge.svg)](https://codecov.io/gh/heitorgcosta/Quiver)
 
 Quiver is a library that provides an easy way to validate, search and filter objects.
 
