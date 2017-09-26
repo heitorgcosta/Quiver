@@ -36,7 +36,13 @@ class QuiverStringValidatorTests: XCTestCase {
     func testRegexValidator() throws {
         let validator: Validator = .regex(pattern: "^([a-zA-Z0-9_\\.\\-])+\\@(([a-zA-Z0-9\\-])+\\.)+([a-zA-Z0-9]{2,4})+$")
         
-        var result = try validator.validate(with: "0123456789")
+        var result = try validator.validate(with: "")
+        XCTAssert(result == true, "Expected 'true' as a result, but got '\(result)'")
+        
+        result = try validator.validate(with: nil)
+        XCTAssert(result == true, "Expected 'true' as a result, but got '\(result)'")
+        
+        result = try validator.validate(with: "0123456789")
         XCTAssert(result == false, "Expected 'false' as a result, but got '\(result)'")
         
         result = try validator.validate(with: "The quick brown fox")
