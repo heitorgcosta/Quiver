@@ -4,6 +4,7 @@
 ![Swift 4.0](https://img.shields.io/badge/Swift-4.0-green.svg?style=flat)
 ![Xcode 9.0](https://img.shields.io/badge/Xcode-9.0-yellow.svg?style=flat)
 [![CocoaPods Compatible](https://img.shields.io/cocoapods/v/Quiver.svg)](https://img.shields.io/cocoapods/v/Quiver.svg)
+[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![Build Status](https://travis-ci.org/heitorgcosta/Quiver.svg?branch=master)](https://travis-ci.org/heitorgcosta/Quiver)
 [![codecov](https://codecov.io/gh/heitorgcosta/Quiver/branch/master/graph/badge.svg)](https://codecov.io/gh/heitorgcosta/Quiver)
 
