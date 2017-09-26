@@ -13,11 +13,9 @@ class QuiverStringValidatorTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
     }
     
     override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
     }
     
@@ -34,4 +32,17 @@ class QuiverStringValidatorTests: XCTestCase {
         XCTAssert(result == true, "Expected 'true' as a result, but got '\(result)'")
     }
     
+    
+    func testRegexValidator() throws {
+        let validator: Validator = .regex(pattern: "^([a-zA-Z0-9_\\.\\-])+\\@(([a-zA-Z0-9\\-])+\\.)+([a-zA-Z0-9]{2,4})+$")
+        
+        var result = try validator.validate(with: "0123456789")
+        XCTAssert(result == false, "Expected 'false' as a result, but got '\(result)'")
+        
+        result = try validator.validate(with: "The quick brown fox")
+        XCTAssert(result == false, "Expected 'false' as a result, but got '\(result)'")
+        
+        result = try validator.validate(with: "email@mail.com")
+        XCTAssert(result == true, "Expected 'true' as a result, but got '\(result)'")
+    }
 }
