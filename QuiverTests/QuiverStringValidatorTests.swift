@@ -50,4 +50,83 @@ class QuiverStringValidatorTests: XCTestCase {
         result = try validator.validate(with: "email@mail.com")
         XCTAssert(result == true, "Expected 'true' as a result, but got '\(result)'")
     }
+    
+    func testEmailValidator() throws {
+        let validator: Validator = .email()
+        
+        var result = try validator.validate(with: "")
+        XCTAssert(result == true, "Expected 'true' as a result, but got '\(result)'")
+        
+        result = try validator.validate(with: nil)
+        XCTAssert(result == true, "Expected 'true' as a result, but got '\(result)'")
+        
+        result = try validator.validate(with: "0123456789")
+        XCTAssert(result == false, "Expected 'false' as a result, but got '\(result)'")
+        
+        result = try validator.validate(with: "The quick brown fox")
+        XCTAssert(result == false, "Expected 'false' as a result, but got '\(result)'")
+        
+        result = try validator.validate(with: "email@mail.com")
+        XCTAssert(result == true, "Expected 'true' as a result, but got '\(result)'")
+    }
+    
+    func testAlphabeticValidator() throws {
+        let validator: Validator = .alphabetic()
+        
+        var result = try validator.validate(with: "")
+        XCTAssert(result == true, "Expected 'true' as a result, but got '\(result)'")
+        
+        result = try validator.validate(with: nil)
+        XCTAssert(result == true, "Expected 'true' as a result, but got '\(result)'")
+        
+        result = try validator.validate(with: "0123456789")
+        XCTAssert(result == false, "Expected 'false' as a result, but got '\(result)'")
+        
+        result = try validator.validate(with: "jfdsj234njvsnjv")
+        XCTAssert(result == false, "Expected 'false' as a result, but got '\(result)'")
+        
+        result = try validator.validate(with: "hfdicnscwtewg")
+        XCTAssert(result == true, "Expected 'true' as a result, but got '\(result)'")
+    }
+    
+    func testNumericValidator() throws {
+        let validator: Validator = .numeric()
+        
+        var result = try validator.validate(with: "")
+        XCTAssert(result == true, "Expected 'true' as a result, but got '\(result)'")
+        
+        result = try validator.validate(with: nil)
+        XCTAssert(result == true, "Expected 'true' as a result, but got '\(result)'")
+        
+        result = try validator.validate(with: "0123456789")
+        XCTAssert(result == true, "Expected 'true' as a result, but got '\(result)'")
+        
+        result = try validator.validate(with: "jfdsj234njvsnjv")
+        XCTAssert(result == false, "Expected 'false' as a result, but got '\(result)'")
+        
+        result = try validator.validate(with: "hfdicnscwtewg")
+        XCTAssert(result == false, "Expected 'false' as a result, but got '\(result)'")
+    }
+    
+    func testAlphaNumericValidator() throws {
+        let validator: Validator = .alphaNumeric()
+        
+        var result = try validator.validate(with: "")
+        XCTAssert(result == true, "Expected 'true' as a result, but got '\(result)'")
+        
+        result = try validator.validate(with: nil)
+        XCTAssert(result == true, "Expected 'true' as a result, but got '\(result)'")
+        
+        result = try validator.validate(with: "0123456789")
+        XCTAssert(result == true, "Expected 'true' as a result, but got '\(result)'")
+        
+        result = try validator.validate(with: "jfdsj234njvsnjv")
+        XCTAssert(result == true, "Expected 'true' as a result, but got '\(result)'")
+        
+        result = try validator.validate(with: "hfdicnscwtewg")
+        XCTAssert(result == true, "Expected 'true' as a result, but got '\(result)'")
+        
+        result = try validator.validate(with: "idn91941&jfwekf")
+        XCTAssert(result == false, "Expected 'false' as a result, but got '\(result)'")
+    }
 }
