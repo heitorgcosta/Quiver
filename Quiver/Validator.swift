@@ -68,4 +68,8 @@ public extension Validator {
     public static func length(min: Int = 0, max: Int = Int.max, message: String? = nil) -> Validator {
         return LengthValidator(min: min, max: max).with(message: message)
     }
+    
+    public static func regex(pattern: String, message: String? = nil) -> Validator {
+        return RegexValidator(pattern: pattern).with(message: message) 
+    }
 }
