@@ -27,7 +27,6 @@ class QuiverFilteringTests: XCTestCase {
         }
     }
 
-    
     // Test array
     var array: [TestClass] = []
     

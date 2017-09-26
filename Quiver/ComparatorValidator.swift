@@ -7,7 +7,7 @@
 //
 
 class ComparatorValidator<T>: Validator where T: Comparable {
-    typealias ComparationOperator = (T,T) -> Bool
+    typealias ComparationOperator = (T, T) -> Bool
     
     private var value: T
     private var operation: ComparationOperator
@@ -35,7 +35,7 @@ class ComparatorValidator<T>: Validator where T: Comparable {
 }
 
 class ComparatorEnumValidator<T>: Validator where T: RawRepresentable, T.RawValue: Equatable {
-    typealias ComparationOperator = (T,T) -> Bool
+    typealias ComparationOperator = (T, T) -> Bool
     
     private var value: T
     private var operation: ComparationOperator
@@ -58,4 +58,3 @@ class ComparatorEnumValidator<T>: Validator where T: RawRepresentable, T.RawValu
         return operation(value, self.value)
     }
 }
-

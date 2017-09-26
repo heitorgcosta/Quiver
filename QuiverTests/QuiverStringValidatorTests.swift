@@ -32,7 +32,6 @@ class QuiverStringValidatorTests: XCTestCase {
         XCTAssert(result == true, "Expected 'true' as a result, but got '\(result)'")
     }
     
-    
     func testRegexValidator() throws {
         let validator: Validator = .regex(pattern: "^([a-zA-Z0-9_\\.\\-])+\\@(([a-zA-Z0-9\\-])+\\.)+([a-zA-Z0-9]{2,4})+$")
         

@@ -6,7 +6,7 @@
 //  Copyright © 2017 Heitor Costa. All rights reserved.
 //
 
-public class Validator  {
+public class Validator {
     internal private(set) var message: String?
     
     public func validate(with object: Any?) throws -> Bool {
