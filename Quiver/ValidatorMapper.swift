@@ -16,7 +16,7 @@ public class ValidatorMapper {
     
     public private(set) var keyPaths: [AnyKeyPath] = []
     
-    public subscript(keyPath: AnyKeyPath) -> [Validator]  {
+    public subscript(keyPath: AnyKeyPath) -> [Validator] {
         get {
             return mapping[keyPath]!
         }
