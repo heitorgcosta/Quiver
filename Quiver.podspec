@@ -12,9 +12,9 @@ Pod::Spec.new do |s|
   s.summary          = 'Validation, searching and filtering made easy for swift.'
 
   s.homepage         = 'https://github.com/heitorgcosta/Quiver'
-  s.license          = { :type => 'MIT' }
+  s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'HeyThor' => 'heitorgcosta1993@gmail.com' }
-  s.source           = { :git => 'https://github.com/heitorgcosta/Quiver.git' }
+  s.source           = { :git => 'https://github.com/heitorgcosta/Quiver.git', :tag => s.version }
 
   s.ios.deployment_target = '10.0'
 
