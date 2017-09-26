@@ -15,7 +15,12 @@ Quiver is a library that provides an easy way to validate, search and filter obj
 ```
 pod 'Quiver', '~> 1.0'
 ```
-  
+
+## Carthage
+```
+github "heitorgcosta/Quiver" ~> 1.0  
+```
+
 # Usage
 
 ## Validating
