@@ -13,7 +13,7 @@ Quiver is a library that provides an easy way to validate, search and filter obj
 
 ## Cocoapods
 ```
-pod 'Quiver', :git => 'https://github.com/heitorgcosta/Quiver.git'
+pod 'Quiver', '~> 1.0'
 ```
   
 # Usage
