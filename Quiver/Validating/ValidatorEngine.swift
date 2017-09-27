@@ -48,7 +48,13 @@ class ValidatorEngineUnit {
         var errorItems: [ValidationErrorItem] = []
         
         for validator in validators {
-            let unwrappedValue = object[keyPath: keyPath]!
+            let wrappedValue = object[keyPath: keyPath]
+            
+            if wrappedValue == nil {
+                fatalError("Invalid keypath for object of type '\(type(of: object))'. Check if all keypaths in the 'validations(with:)' are correct.")
+            }
+            
+            let unwrappedValue = wrappedValue!
             
             var value: Any? = nil
             if unwrappedValue is IsOptional {

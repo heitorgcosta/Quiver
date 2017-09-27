@@ -22,7 +22,13 @@ class QuiverStringValidatorTests: XCTestCase {
     func testLengthValidator() throws {
         let validator: Validator = .length(min: 3, max: 10)
         
-        var result = try validator.validate(with: "Hi")
+        var result = try validator.validate(with: nil)
+        XCTAssert(result == true, "Expected 'true' as a result, but got '\(result)'")
+        
+        result = try validator.validate(with: "")
+        XCTAssert(result == true, "Expected 'true' as a result, but got '\(result)'")
+        
+        result = try validator.validate(with: "Hi")
         XCTAssert(result == false, "Expected 'false' as a result, but got '\(result)'")
         
         result = try validator.validate(with: "The quick brown fox")
