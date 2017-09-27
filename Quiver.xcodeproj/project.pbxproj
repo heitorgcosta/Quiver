@@ -34,6 +34,8 @@
 		6CF012531F70D3B400FF112E /* RangeValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CF012521F70D3B400FF112E /* RangeValidator.swift */; };
 		6CF012551F70D47600FF112E /* NegateValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CF012541F70D47600FF112E /* NegateValidator.swift */; };
 		6CF012581F70E0B600FF112E /* QuiverValidatableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CF012571F70E0B600FF112E /* QuiverValidatableTests.swift */; };
+		B267450A1F7C15D50005E516 /* CustomValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26745091F7C15D50005E516 /* CustomValidator.swift */; };
+		B267450C1F7C17770005E516 /* QuiverCustomValidatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B267450B1F7C17770005E516 /* QuiverCustomValidatorTests.swift */; };
 		B2B6DB2D1F7A99FC00356C05 /* RegexValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2B6DB2C1F7A99FC00356C05 /* RegexValidator.swift */; };
 /* End PBXBuildFile section */
 
@@ -78,6 +80,8 @@
 		6CF012521F70D3B400FF112E /* RangeValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RangeValidator.swift; sourceTree = "<group>"; };
 		6CF012541F70D47600FF112E /* NegateValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NegateValidator.swift; sourceTree = "<group>"; };
 		6CF012571F70E0B600FF112E /* QuiverValidatableTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuiverValidatableTests.swift; sourceTree = "<group>"; };
+		B26745091F7C15D50005E516 /* CustomValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomValidator.swift; sourceTree = "<group>"; };
+		B267450B1F7C17770005E516 /* QuiverCustomValidatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuiverCustomValidatorTests.swift; sourceTree = "<group>"; };
 		B2B6DB2C1F7A99FC00356C05 /* RegexValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegexValidator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -166,6 +170,7 @@
 				6CF012541F70D47600FF112E /* NegateValidator.swift */,
 				6C54A3461F773478008B8A59 /* LengthValidator.swift */,
 				B2B6DB2C1F7A99FC00356C05 /* RegexValidator.swift */,
+				B26745091F7C15D50005E516 /* CustomValidator.swift */,
 			);
 			path = "Default Validators";
 			sourceTree = "<group>";
@@ -205,6 +210,7 @@
 				6C8BF0371F76DF7E000261A5 /* QuiverEnumValidatorsTests.swift */,
 				6C54A3481F7735A3008B8A59 /* QuiverStringValidatorTests.swift */,
 				6CF012571F70E0B600FF112E /* QuiverValidatableTests.swift */,
+				B267450B1F7C17770005E516 /* QuiverCustomValidatorTests.swift */,
 			);
 			path = "Validating Tests";
 			sourceTree = "<group>";
@@ -357,6 +363,7 @@
 				B2B6DB2D1F7A99FC00356C05 /* RegexValidator.swift in Sources */,
 				6CABDE091F71DCAA0060EE72 /* ValidatorResult.swift in Sources */,
 				6C3613611F6B53B700E7092F /* Validatable.swift in Sources */,
+				B267450A1F7C15D50005E516 /* CustomValidator.swift in Sources */,
 				6CF012551F70D47600FF112E /* NegateValidator.swift in Sources */,
 				6CF012511F70D12100FF112E /* ComparatorValidator.swift in Sources */,
 				6C54A3471F773478008B8A59 /* LengthValidator.swift in Sources */,
@@ -379,6 +386,7 @@
 				6CF0124B1F70CFA000FF112E /* QuiverFloatingValidatorsTests.swift in Sources */,
 				6CF012581F70E0B600FF112E /* QuiverValidatableTests.swift in Sources */,
 				6C54A3491F7735A3008B8A59 /* QuiverStringValidatorTests.swift in Sources */,
+				B267450C1F7C17770005E516 /* QuiverCustomValidatorTests.swift in Sources */,
 				6CF012491F70CF7F00FF112E /* QuiverIntegerValidatorsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
