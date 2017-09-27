@@ -104,3 +104,10 @@ extension Validator {
         return RegexValidator(pattern: "^[a-zA-Z0-9]+$").with(message: message)
     }
 }
+
+// Custom
+extension Validator {
+    public static func custom(message: String? = nil, validador: @escaping (Any?) -> Bool) -> Validator {
+        return CustomValidator(closure: validador).with(message: message)
+    }
+}
