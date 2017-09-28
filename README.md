@@ -36,7 +36,7 @@ struct Person {
 }
 
 extension Person: Validatable {
-    func validations(mapper: ValidatorMapper) {
+    func validations(with mapper: ValidatorMapper) {
         // Name is required and must be at least 4 characters long.
         mapper[\Person.name] = [.required(),
                                 .length(min: 4)]
@@ -71,7 +71,7 @@ Also, each validator can contain a custom message defined by you.
 
 ```swift
 extension Person: Validatable {
-    func validations(mapper: ValidatorMapper) {
+    func validations(with mapper: ValidatorMapper) {
         mapper[\Person.name] = [.required(message: "The name is required"),
                                 .length(min: 4, message: "The name should be at least 4 characters long")]
 
