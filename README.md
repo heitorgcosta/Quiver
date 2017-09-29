@@ -27,7 +27,7 @@ github "heitorgcosta/Quiver" ~> 1.0  
 ## Validating
 
 Objects can be easily validated by implementing the `Validatable` protocol.
-To do so, `validations(mapper:)` must be implemented. The mapping is made with the new Swift 4 smart keypaths.
+To do so, `validations(with:)` must be implemented. The mapping is made with the new Swift 4 smart keypaths.
 
 ```swift
 struct Person {
