@@ -8,6 +8,15 @@
 
 public extension Array where Element: Any {
     
+    /**
+     Filters the array for objects that the value of a specified keypath passes the specified validations.
+     
+     - parameters:
+     - keyPath: The keypath to be used for filtering.
+     - validators: An array of validators that defines the rules of the filter..
+     
+     - Returns: An array with the elements that the value of the keypath passing the validations.
+     */
     public func filter(by keyPath: PartialKeyPath<Element>, with validators: [Validator]) -> [Element] {
         
         return self.flatMap({ element in

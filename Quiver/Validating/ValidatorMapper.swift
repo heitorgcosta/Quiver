@@ -13,14 +13,23 @@ public class ValidatorMapper {
     private typealias Map = [AnyKeyPath:[Validator]]
     
     private var mapping: Map = Map()
+    private var excludedKeyPaths: [AnyKeyPath] = []
     
     public private(set) var keyPaths: [AnyKeyPath] = []
+    
+    init(excluding keyPaths: [AnyKeyPath]) {
+        self.excludedKeyPaths = keyPaths
+    }
     
     public subscript(keyPath: AnyKeyPath) -> [Validator] {
         get {
             return mapping[keyPath]!
         }
         set {
+            if excludedKeyPaths.contains(keyPath) {
+                return
+            }
+            
             mapping[keyPath] = newValue
             if !keyPaths.contains(keyPath) {
                 keyPaths.append(keyPath)

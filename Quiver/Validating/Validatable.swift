@@ -28,7 +28,25 @@ public extension Validatable {
      - Returns: A ValidatorResult describing the success of the validation or errors occurred.
      */
     public func validate() -> ValidatorResult {
-        let engine = ValidatorEngine(mapper: ValidatorMapper(), validatableSubject: self)
+        return validate(excluding: [])
+    }
+    
+    /**
+     Validates the object, ignoring a specified key path, and returns the results.
+     
+     - Returns: A ValidatorResult describing the success of the validation or errors occurred.
+     */
+    public func validate(excluding keyPath: AnyKeyPath) -> ValidatorResult {
+        return validate(excluding: [keyPath])
+    }
+    
+    /**
+     Validates the object, ignoring a set of key paths, and returns the results.
+     
+     - Returns: A ValidatorResult describing the success of the validation or errors occurred.
+     */
+    public func validate(excluding keyPaths: [AnyKeyPath]) -> ValidatorResult {
+        let engine = ValidatorEngine(mapper: ValidatorMapper(excluding: keyPaths), validatableSubject: self)
         let result = engine.performValidations()
         return result
     }

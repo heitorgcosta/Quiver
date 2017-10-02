@@ -33,13 +33,3 @@ extension Character: Stringable {
         return "\(self)"
     }
 }
-
-//extension Date: Stringable {
-//    internal func convertToString() -> String {
-//        guard let formatter = Quiver.dateFormatter else {
-//            return "\(self.shortDateTime) \(self.mediumDate) \(self.longDate)"
-//        }
-//        
-//        return formatter.string(from: self)
-//    }
-//}
