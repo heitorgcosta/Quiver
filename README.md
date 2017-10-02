@@ -7,6 +7,8 @@
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![Build Status](https://travis-ci.org/heitorgcosta/Quiver.svg?branch=master)](https://travis-ci.org/heitorgcosta/Quiver)
 [![codecov](https://codecov.io/gh/heitorgcosta/Quiver/branch/master/graph/badge.svg)](https://codecov.io/gh/heitorgcosta/Quiver)
+[![codebeat badge](https://codebeat.co/badges/8649319f-2189-422c-a2ab-293ac4646343)](https://codebeat.co/projects/github-com-heitorgcosta-quiver-master)
+
 
 Quiver is a library that provides an easy way to validate, search and filter objects.
 
