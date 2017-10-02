@@ -24,7 +24,7 @@ class QuiverValidatableTests: XCTestCase {
             var dummyVar: String?
         }
         
-        let mapper = ValidatorMapper()
+        let mapper = ValidatorMapper(excluding: [])
         mapper[\DummyStruct.dummyVar] = [.required(), .greater(than: 5), .between(4, and: 6)]
         
         let validators = mapper[\DummyStruct.dummyVar]
@@ -101,6 +101,85 @@ class QuiverValidatableTests: XCTestCase {
         let johnResult = personJohn.validate()
         let johnError = johnResult.error
         XCTAssertNil(johnError, "Expected error to be nil, but it isn't.")
+    }
+    
+    func testValidationExcludingKeyPath() {
+        struct Person: Validatable {
+            var name: String?
+            var age: Int?
+            
+            init(name: String?, age: Int?) {
+                self.name = name
+                self.age = age
+            }
+            
+            func validations(with mapper: ValidatorMapper) {
+                mapper[\Person.name] = [.required(message: "Name is required"),
+                                        .length(min: 4, message: "Name should be at least 4 characters long.")]
+                
+                mapper[\Person.age] = [.required(message: "Age is required"),
+                                       .greater(than: 3, message: "Age should be greater than 3")]
+            }
+        }
+        
+        let personNil = Person(name: nil, age: 2)
+        let nilResult = personNil.validate(excluding: \Person.age)
+        let nilMessage = nilResult.error!.firstItem?.message
+        XCTAssertNotNil(nilMessage, "Expected message to not be nil, but it is.")
+        XCTAssert(nilMessage! == "Name is required", "Expected message passed through argument, but got '\(nilMessage!)'")
+        
+        let personAna = Person(name: "Ana", age: nil)
+        let anaResult = personAna.validate(excluding: \Person.age)
+        let anaMessage = anaResult.error!.firstItem?.message
+        XCTAssertNotNil(anaMessage, "Expected message to not be nil, but it is.")
+        XCTAssert(anaMessage! == "Name should be at least 4 characters long.", "Expected message passed through argument, but got '\(anaMessage!)'")
+        
+        let personJohn = Person(name: "John", age: 1)
+        let johnResult = personJohn.validate(excluding: \Person.age)
+        let johnError = johnResult.error
+        XCTAssertNil(johnError, "Expected error to be nil, but it isn't.")
+    }
+    
+    func testValidationExcludingKeyPaths() {
+        struct Person: Validatable {
+            var name: String?
+            var age: Int?
+            
+            init(name: String?, age: Int?) {
+                self.name = name
+                self.age = age
+            }
+            
+            func validations(with mapper: ValidatorMapper) {
+                mapper[\Person.name] = [.required(message: "Name is required"),
+                                        .length(min: 4, message: "Name should be at least 4 characters long.")]
+                
+                mapper[\Person.age] = [.required(message: "Age is required"),
+                                       .greater(than: 3, message: "Age should be greater than 3")]
+            }
+        }
+        
+        let personNil = Person(name: nil, age: 2)
+        let nilResult = personNil.validate(excluding: [\Person.age])
+        let nilMessage = nilResult.error!.firstItem?.message
+        XCTAssertNotNil(nilMessage, "Expected message to not be nil, but it is.")
+        XCTAssert(nilMessage! == "Name is required", "Expected message passed through argument, but got '\(nilMessage!)'")
+        
+        let personAna = Person(name: "Ana", age: nil)
+        let anaResult = personAna.validate(excluding: [\Person.age])
+        let anaMessage = anaResult.error!.firstItem?.message
+        XCTAssertNotNil(anaMessage, "Expected message to not be nil, but it is.")
+        XCTAssert(anaMessage! == "Name should be at least 4 characters long.", "Expected message passed through argument, but got '\(anaMessage!)'")
+        
+        let personJohn = Person(name: "John", age: 1)
+        let johnResult = personJohn.validate(excluding: [\Person.age])
+        let johnError = johnResult.error
+        XCTAssertNil(johnError, "Expected error to be nil, but it isn't.")
+        
+        let personBob = Person(name: "Bob", age: nil)
+        let bobResult = personBob.validate(excluding: [\Person.name, \Person.age])
+        let bobError = bobResult.error
+        XCTAssertNil(bobError, "Expected error to be nil, but it isn't.")
     }
 
 }
