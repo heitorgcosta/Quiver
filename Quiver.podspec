@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'Quiver'
-  s.version          = '1.0.1'
+  s.version          = '1.0.2'
   s.summary          = 'Validation, searching and filtering made easy for swift.'
 
   s.homepage         = 'https://github.com/heitorgcosta/Quiver'
