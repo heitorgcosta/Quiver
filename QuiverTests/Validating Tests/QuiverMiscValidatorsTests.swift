@@ -47,4 +47,25 @@ class QuiverValidatorsTests: XCTestCase {
         XCTAssert(result == false, "Expected 'false', but result was '\(result)'")
     }
     
+    func testConditionalValidator() throws {
+        var x = 10
+        let validator: Validator = .if({ () -> Bool in
+            return x < 5
+        }, use: .required())
+        
+        var result = try validator.validate(with: nil)
+        XCTAssert(result == true, "Expected 'true', but result was '\(result)'")
+        
+        result = try validator.validate(with: 21)
+        XCTAssert(result == true, "Expected 'true', but result was '\(result)'")
+        
+        x = 2
+        
+        result = try validator.validate(with: nil)
+        XCTAssert(result == false, "Expected 'false', but result was '\(result)'")
+        
+        result = try validator.validate(with: 21)
+        XCTAssert(result == true, "Expected 'true', but result was '\(result)'")
+        
+    }
 }

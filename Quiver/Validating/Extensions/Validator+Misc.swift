@@ -16,4 +16,7 @@ public extension Validator {
     public static func not(_ validator: Validator, message: String? = nil) -> Validator {
         return NegateValidator(validator: validator).with(message: message)
     }
+    public static func `if`(_ condition: @escaping () -> Bool, use validator: Validator) -> Validator {
+        return ConditionalValidator(conditionClosure: condition, validator: validator)
+    }
 }
