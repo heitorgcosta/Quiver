@@ -10,7 +10,7 @@ import Foundation
 
 class RegexValidator: Validator {
     
-    var pattern: String
+    private var pattern: String
     
     init(pattern: String) {
         self.pattern = pattern

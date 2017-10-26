@@ -12,7 +12,7 @@ class CustomValidator: Validator {
     
     typealias ValidationClousure = (Any?) -> Bool
     
-    var closure: ValidationClousure
+    private var closure: ValidationClousure
     
     init(closure: @escaping ValidationClousure) {
         self.closure = closure
