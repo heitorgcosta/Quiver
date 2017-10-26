@@ -49,7 +49,7 @@ class QuiverValidatorsTests: XCTestCase {
     
     func testConditionalValidator() throws {
         var x = 10
-        let validator: Validator = .if({ () -> Bool in
+        let validator: Validator = .when({ () -> Bool in
             return x < 5
         }, use: .required())
         
