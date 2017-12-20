@@ -13,7 +13,7 @@
  
  Also, the `validate(with:)` function should check type compatibility, if it validates an specific type of data, and throw `ValidationErrorType.typeMismatch` if necessary.
  */
-public class Validator {
+open class Validator {
     
     /// The error message that will be presented in the validation errors.
     public private(set) var message: String?
