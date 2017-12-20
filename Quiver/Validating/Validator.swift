@@ -16,7 +16,7 @@
 public class Validator {
     
     /// The error message that will be presented in the validation errors.
-    internal private(set) var message: String?
+    public private(set) var message: String?
     
     /**
      Performs validation on the specified object as context.

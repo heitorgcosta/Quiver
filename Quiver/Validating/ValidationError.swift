@@ -23,7 +23,7 @@ public struct ValidationError {
         return items.first
     }
     
-    init(items: [ValidationErrorItem]) {
+    public init(items: [ValidationErrorItem]) {
         self.items = items
         
         mapItemsByField()
