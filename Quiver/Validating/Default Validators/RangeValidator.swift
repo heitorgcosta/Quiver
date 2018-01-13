@@ -52,10 +52,10 @@ class RangeComparator<T>: Validator where T: Comparable {
     }
 }
 
-class RangeTypeValidator<T>: Validator where T: Comparable {
-    var range: Range<T>
+class RangeTypeValidator<R>: Validator where R: RangeExpression {
+    var range: R
     
-    init(range: Range<T>) {
+    init(range: R) {
         self.range = range
     }
     
@@ -64,91 +64,10 @@ class RangeTypeValidator<T>: Validator where T: Comparable {
             return true
         }
         
-        guard let value = object! as? T else {
-            throw ValidationErrorType.typeMismatch(expected: T.self, actual: type(of: object!))
+        guard let value = object! as? R.Bound else {
+            throw ValidationErrorType.typeMismatch(expected: R.Bound.self, actual: type(of: object!))
         }
         
         return range~=value
     }
 }
-
-class ClosedRangeTypeValidator<T>: Validator where T: Comparable {
-    var range: ClosedRange<T>
-
-    init(range: ClosedRange<T>) {
-        self.range = range
-    }
-
-    override func validate(with object: Any?) throws -> Bool {
-        if object == nil {
-            return true
-        }
-
-        guard let value = object! as? T else {
-            throw ValidationErrorType.typeMismatch(expected: T.self, actual: type(of: object!))
-        }
-
-        return range~=value
-    }
-}
-
-class PartialRangeFromTypeValidator<T>: Validator where T: Comparable {
-    var range: PartialRangeFrom<T>
-
-    init(range: PartialRangeFrom<T>) {
-        self.range = range
-    }
-
-    override func validate(with object: Any?) throws -> Bool {
-        if object == nil {
-            return true
-        }
-
-        guard let value = object! as? T else {
-            throw ValidationErrorType.typeMismatch(expected: T.self, actual: type(of: object!))
-        }
-
-        return range~=value
-    }
-}
-
-class PartialRangeUpToTypeValidator<T>: Validator where T: Comparable {
-    var range: PartialRangeUpTo<T>
-    
-    init(range: PartialRangeUpTo<T>) {
-        self.range = range
-    }
-    
-    override func validate(with object: Any?) throws -> Bool {
-        if object == nil {
-            return true
-        }
-        
-        guard let value = object! as? T else {
-            throw ValidationErrorType.typeMismatch(expected: T.self, actual: type(of: object!))
-        }
-        
-        return range~=value
-    }
-}
-
-class PartialRangeThroughTypeValidator<T>: Validator where T: Comparable {
-    var range: PartialRangeThrough<T>
-    
-    init(range: PartialRangeThrough<T>) {
-        self.range = range
-    }
-    
-    override func validate(with object: Any?) throws -> Bool {
-        if object == nil {
-            return true
-        }
-        
-        guard let value = object! as? T else {
-            throw ValidationErrorType.typeMismatch(expected: T.self, actual: type(of: object!))
-        }
-        
-        return range~=value
-    }
-}
-
