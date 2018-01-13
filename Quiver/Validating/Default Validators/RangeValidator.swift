@@ -51,3 +51,23 @@ class RangeComparator<T>: Validator where T: Comparable {
         return value >= self.value1 && value <= self.value2
     }
 }
+
+class RangeTypeValidator<R>: Validator where R: RangeExpression {
+    var range: R
+    
+    init(range: R) {
+        self.range = range
+    }
+    
+    override func validate(with object: Any?) throws -> Bool {
+        if object == nil {
+            return true
+        }
+        
+        guard let value = object! as? R.Bound else {
+            throw ValidationErrorType.typeMismatch(expected: R.Bound.self, actual: type(of: object!))
+        }
+        
+        return range~=value
+    }
+}

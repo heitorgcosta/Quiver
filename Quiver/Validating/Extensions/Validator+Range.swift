@@ -17,4 +17,9 @@ extension Validator {
     public static func from<T>(_ value1: T, to value2: T, message: String? = nil) -> Validator where T: Comparable {
         return RangeComparator(value1: value1, value2: value2).with(message: message)
     }
+   
+    public static func range<R>(_ range: R, message: String? = nil) -> Validator where R: RangeExpression {
+        return RangeTypeValidator(range: range).with(message: message)
+    }
+    
 }

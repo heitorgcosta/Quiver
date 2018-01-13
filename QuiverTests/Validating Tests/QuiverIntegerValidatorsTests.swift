@@ -166,4 +166,99 @@ class QuiverIntegerValidatorsTests: XCTestCase {
         result = try validator.validate(with: 65)
         XCTAssert(result == true, "Expected 'true', but result was '\(result)'")
     }
+    
+    func testRangeTypeValidator() throws {
+        let validator: Validator = .range(50..<100)
+        
+        var result = try validator.validate(with: nil)
+        XCTAssert(result == true, "Expected 'true', but result was '\(result)'")
+        
+        result = try validator.validate(with: 100)
+        XCTAssert(result == false, "Expected 'true', but result was '\(result)'")
+        
+        result = try validator.validate(with: 50)
+        XCTAssert(result == true, "Expected 'true', but result was '\(result)'")
+        
+        result = try validator.validate(with: 30)
+        XCTAssert(result == false, "Expected 'false', but result was '\(result)'")
+        
+        result = try validator.validate(with: 110)
+        XCTAssert(result == false, "Expected 'false', but result was '\(result)'")
+        
+    }
+    
+    func testClosedRangeTypeValidator() throws {
+        let validator: Validator = .range(50...100)
+        
+        var result = try validator.validate(with: nil)
+        XCTAssert(result == true, "Expected 'true', but result was '\(result)'")
+        
+        result = try validator.validate(with: 100)
+        XCTAssert(result == true, "Expected 'true', but result was '\(result)'")
+        
+        result = try validator.validate(with: 50)
+        XCTAssert(result == true, "Expected 'true', but result was '\(result)'")
+        
+        result = try validator.validate(with: 30)
+        XCTAssert(result == false, "Expected 'false', but result was '\(result)'")
+        
+        result = try validator.validate(with: 110)
+        XCTAssert(result == false, "Expected 'false', but result was '\(result)'")
+        
+    }
+    
+    func testPartialRangeUpToTypeValidator() throws {
+        let validator: Validator = .range(..<50)
+        
+        var result = try validator.validate(with: nil)
+        XCTAssert(result == true, "Expected 'true', but result was '\(result)'")
+        
+        result = try validator.validate(with: 100)
+        XCTAssert(result == false, "Expected 'true', but result was '\(result)'")
+        
+        result = try validator.validate(with: 50)
+        XCTAssert(result == false, "Expected 'true', but result was '\(result)'")
+        
+        result = try validator.validate(with: 30)
+        XCTAssert(result == true, "Expected 'false', but result was '\(result)'")
+        
+        result = try validator.validate(with: -1)
+        XCTAssert(result == true, "Expected 'false', but result was '\(result)'")
+        
+    }
+    
+    func testPartialRangeThroughTypeValidator() throws {
+        let validator: Validator = .range(...50)
+        
+        var result = try validator.validate(with: nil)
+        XCTAssert(result == true, "Expected 'true', but result was '\(result)'")
+        
+        result = try validator.validate(with: 100)
+        XCTAssert(result == false, "Expected 'true', but result was '\(result)'")
+        
+        result = try validator.validate(with: 50)
+        XCTAssert(result == true, "Expected 'true', but result was '\(result)'")
+        
+        result = try validator.validate(with: -1)
+        XCTAssert(result == true, "Expected 'false', but result was '\(result)'")
+        
+    }
+    
+    func testPartialRangeFromTypeValidator() throws {
+        let validator: Validator = .range(30...)
+        
+        var result = try validator.validate(with: nil)
+        XCTAssert(result == true, "Expected 'true', but result was '\(result)'")
+        
+        result = try validator.validate(with: 29)
+        XCTAssert(result == false, "Expected 'true', but result was '\(result)'")
+        
+        result = try validator.validate(with: 1000)
+        XCTAssert(result == true, "Expected 'true', but result was '\(result)'")
+        
+        result = try validator.validate(with: 30)
+        XCTAssert(result == true, "Expected 'false', but result was '\(result)'")
+        
+    }
+    
 }
