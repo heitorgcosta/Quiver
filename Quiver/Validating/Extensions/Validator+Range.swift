@@ -17,4 +17,25 @@ extension Validator {
     public static func from<T>(_ value1: T, to value2: T, message: String? = nil) -> Validator where T: Comparable {
         return RangeComparator(value1: value1, value2: value2).with(message: message)
     }
+   
+    public static func range<T>(_ range: Range<T>, message: String? = nil) -> Validator {
+        return RangeTypeValidator(range: range).with(message: message)
+    }
+    
+    public static func range<T>(_ range: ClosedRange<T>, message: String? = nil) -> Validator {
+        return ClosedRangeTypeValidator(range: range).with(message: message)
+    }
+    
+    public static func range<T>(_ range: PartialRangeThrough<T>, message: String? = nil) -> Validator {
+        return PartialRangeThroughTypeValidator(range: range).with(message: message)
+    }
+    
+    public static func range<T>(_ range: PartialRangeUpTo<T>, message: String? = nil) -> Validator {
+        return PartialRangeUpToTypeValidator(range: range).with(message: message)
+    }
+    
+    public static func range<T>(_ range: PartialRangeFrom<T>, message: String? = nil) -> Validator {
+        return PartialRangeFromTypeValidator(range: range).with(message: message)
+    }
+    
 }
