@@ -1,8 +1,8 @@
 # Quiver
 
 [![license](https://img.shields.io/github/license/mashape/apistatus.svg)](https://opensource.org/licenses/MIT)
-![Swift 4.0](https://img.shields.io/badge/Swift-4.0-green.svg?style=flat)
-![Xcode 9.0](https://img.shields.io/badge/Xcode-9.0-yellow.svg?style=flat)
+![Swift 4.1](https://img.shields.io/badge/Swift-4.0-green.svg?style=flat)
+![Xcode 9.3](https://img.shields.io/badge/Xcode-9.0-yellow.svg?style=flat)
 [![CocoaPods Compatible](https://img.shields.io/cocoapods/v/Quiver.svg)](https://img.shields.io/cocoapods/v/Quiver.svg)
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![Build Status](https://travis-ci.org/heitorgcosta/Quiver.svg?branch=master)](https://travis-ci.org/heitorgcosta/Quiver)
@@ -16,12 +16,12 @@ Quiver is a library that provides an easy way to validate, search and filter obj
 
 ## Cocoapods
 ```
-pod 'Quiver', '~> 1.0'
+pod 'Quiver', '~> 1.1'
 ```
 
 ## Carthage
 ```
-github "heitorgcosta/Quiver" ~> 1.0  
+github "heitorgcosta/Quiver" ~> 1.1  
 ```
 
 # Usage
