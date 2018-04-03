@@ -19,7 +19,7 @@ public extension Array where Element: Any {
      */
     public func filter(by keyPath: PartialKeyPath<Element>, with validators: [Validator]) -> [Element] {
         
-        return self.flatMap({ element in
+        return self.compactMap({ element in
             let unit = ValidatorEngineUnit(object: element, keyPath: keyPath, validators: validators)
             return unit.results().count == 0 ? element : nil
         })
