@@ -11,7 +11,7 @@
  */
 public struct ValidationError {
     
-    typealias ValidationErrorItemMap = [AnyKeyPath:[ValidationErrorItem]]
+    typealias ValidationErrorItemMap = [AnyKeyPath: [ValidationErrorItem]]
     
     /// The array containing all error items occurred during validation.
     public private(set) var items: [ValidationErrorItem] = []
