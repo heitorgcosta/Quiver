@@ -10,7 +10,7 @@
  A type used for mapping validators to keypaths.
  */
 public class ValidatorMapper {
-    private typealias Map = [AnyKeyPath:[Validator]]
+    private typealias Map = [AnyKeyPath: [Validator]]
     
     private var mapping: Map = Map()
     private var excludedKeyPaths: [AnyKeyPath] = []
