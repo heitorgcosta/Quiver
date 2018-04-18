@@ -1,7 +1,7 @@
 language: swift
 osx_image: xcode9.3
-xcode_sdk: iphonesimulator11.0
+xcode_sdk: iphonesimulator11.3
 script:
-    - xcodebuild -scheme Quiver -project Quiver.xcodeproj -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 6S,OS=11.0' build test
+    - xcodebuild -scheme Quiver -project Quiver.xcodeproj -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 6S,OS=11.3' build test
 after_success:
     - bash <(curl -s https://codecov.io/bash) -J 'Quiver'
