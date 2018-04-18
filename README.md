@@ -125,6 +125,6 @@ let persons: [Person] = [] // Just imagine a great collection of persons
 let filtered = persons.filter(by: \Person.name, with: [.length(min: 4)]) // Filter persons that contains name with length of at least 4 characters
 ```
 
-# Licence 
+# License 
 
 Quiver is released under the [MIT License](https://opensource.org/licenses/MIT).
