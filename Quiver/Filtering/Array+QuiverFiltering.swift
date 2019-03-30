@@ -17,7 +17,7 @@ public extension Array where Element: Any {
      
      - Returns: An array with the elements that the value of the keypath passing the validations.
      */
-    public func filter(by keyPath: PartialKeyPath<Element>, with validators: [Validator]) -> [Element] {
+    func filter(by keyPath: PartialKeyPath<Element>, with validators: [Validator]) -> [Element] {
         
         return self.compactMap({ element in
             let unit = ValidatorEngineUnit(object: element, keyPath: keyPath, validators: validators)

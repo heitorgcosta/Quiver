@@ -18,7 +18,7 @@ public extension Array where Element: Searchable {
      - Returns: An array with the elements with matching fields.
     */
  
-    public func search(withText text: String, caseSensitive: Bool = false) -> [Element] {
+    func search(withText text: String, caseSensitive: Bool = false) -> [Element] {
         var results: [Element] = []
         
         for element in self {
