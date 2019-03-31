@@ -1,8 +1,8 @@
 # Quiver
 
 [![license](https://img.shields.io/github/license/mashape/apistatus.svg)](https://opensource.org/licenses/MIT)
-![Swift 4.1](https://img.shields.io/badge/Swift-4.1-green.svg?style=flat)
-![Xcode 9.3](https://img.shields.io/badge/Xcode-9.3-yellow.svg?style=flat)
+![Swift 5](https://img.shields.io/badge/Swift-5.0-green.svg?style=flat)
+![Xcode 10.2](https://img.shields.io/badge/Xcode-10.2-yellow.svg?style=flat)
 [![CocoaPods Compatible](https://img.shields.io/cocoapods/v/Quiver.svg)](https://img.shields.io/cocoapods/v/Quiver.svg)
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![Build Status](https://travis-ci.org/heitorgcosta/Quiver.svg?branch=master)](https://travis-ci.org/heitorgcosta/Quiver)

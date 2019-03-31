@@ -56,7 +56,7 @@ class ValidatorEngineUnit {
             
             let unwrappedValue = wrappedValue!
             
-            var value: Any? = nil
+            var value: Any?
             if unwrappedValue is IsOptional {
                 if let (_, any) = Mirror(reflecting: unwrappedValue).children.first {
                     value = any as Any
