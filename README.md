@@ -16,12 +16,12 @@ Quiver is a library that provides an easy way to validate, search and filter obj
 
 ## Cocoapods
 ```
-pod 'Quiver', '~> 1.1'
+pod 'Quiver', '~> 1.2'
 ```
 
 ## Carthage
 ```
-github "heitorgcosta/Quiver" ~> 1.1  
+github "heitorgcosta/Quiver" ~> 1.2  
 ```
 
 # Usage

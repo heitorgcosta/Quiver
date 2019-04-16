@@ -1,5 +1,22 @@
 # Change Log
 
+## [1.2.0](https://github.com/heitorgcosta/Quiver/releases/tag/1.2.0) (2019-04-16)
+[Full Changelog](https://github.com/heitorgcosta/Quiver/compare/1.1.0...1.2.0) 
+
+## Fixed
+* Updated to Swift 5
+
+## [1.1.0](https://github.com/heitorgcosta/Quiver/releases/tag/1.1.0) (2018-04-03)
+[Full Changelog](https://github.com/heitorgcosta/Quiver/compare/1.0.2...1.1.0)
+
+## Added
+* Range validation
+* Added by @LucianoPAlmeida in Pull Request [#4](https://github.com/heitorgcosta/quiver/pull/4)
+
+## Fixed
+* Updated to Swift 4.1
+* Fixed some SwiftLint warnings.
+
 ## [1.0.2](https://github.com/heitorgcosta/Quiver/tree/1.0.1) (2017-10-02)
 [Full Changelog](https://github.com/heitorgcosta/Quiver/compare/1.0.1...1.0.2)
 
