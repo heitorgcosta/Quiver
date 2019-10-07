@@ -30,7 +30,7 @@ open class Validator {
      
      - Important: If the implementation of the root class `Validator` is called, it will result in a fatal error.
      */
-    public func validate(with object: Any?) throws -> Bool {
+    open func validate(with object: Any?) throws -> Bool {
         fatalError("Validator is an abstract class. Subclasses must override validate(with:)")
     }
     
